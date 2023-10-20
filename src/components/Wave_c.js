@@ -1,12 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Wave from "react-wavify";
 
 function Wave_c() {
+
+  const darkMode  = useSelector(state => state.dark)
+
   return (
     <>
       <div className="absolute bottom-0 w-full h-[420px] wavify">
         <Wave
-          fill="#FAFEE5"
+          fill= {darkMode === 'dark' ? "#8f8f8f" : "#FAFEE5"}
           paused={false}
           options={{
             height: 30,
@@ -19,7 +23,7 @@ function Wave_c() {
       </div>
       <div className="absolute bottom-0 w-full h-[360px] wavify">
         <Wave
-          fill="#E2F9DC"
+          fill= {darkMode === 'dark' ? "#4f4f4f" : "#E2F9DC"}
           paused={false}
           options={{
             height: 20,
@@ -32,7 +36,7 @@ function Wave_c() {
       </div>
       <div className="absolute bottom-0 w-full h-[300px] wavify">
         <Wave
-          fill="#C7E8CF"
+          fill= {darkMode === 'dark' ? "#292929" : "#C7E8CF"}
           paused={false}
           options={{
             height: 20,

@@ -1,0 +1,29 @@
+{
+    "maintitle" : "Hello : ) I'm Eunju Lee, a new frontend developer.",
+    "about1" : "Hello! I'm a junior developer, Eunju Lee.",
+    "about2" : "I have a deep passion for front-end development.",
+    "about3" : "I have a great interest in expanding my knowledge and exploring various technical fields.",
+    "about4" : "I'm also working on increasing my understanding of back-end development.",
+    "about5" : "I strive to create opportunities for continuous growth by setting new challenges for myself.",
+    "about6" : "With this challenging attitude and passion, I aim to create more value than just writing code.",
+    "about7" : "I embrace change and am not afraid of it, while keeping pace with the changing world.",
+    "about8" : "I actually enjoy new challenges and cherish them as opportunities for my personal growth.",
+    "about9" : "I will continue to walk the path of a",
+    "about10" : "front-end developer",
+    "about11" : "through ongoing learning and challenges.",
+    "hashtags": ["Positive", "Persistent", "Inclusive"],
+    "about": {
+        "birthday": "99.07.19",
+        "location": "Daegu Dalseo-gu",
+        "email": "dldmswn071918@gmail.com",
+        "github": "Git"
+    },
+    "education": {
+        "period1": "2023.06~2023.11",
+        "desc1": "Green Computer Art School 900H",
+        "desc2" : "React-based Front-end Developer Training",
+        "desc3" : "(SPA Project Development)",
+        "period2": "2018.03~2022.02",
+        "desc4": "Yeungnam University of Science and Technology (Physiotherapy)"
+    }
+}
