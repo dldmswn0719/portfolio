@@ -21,12 +21,16 @@ function Inner() {
   const darkMode  = useSelector(state => state.dark)
 
   useEffect(() => {
-
     const savedTheme = localStorage.getItem("theme");
 
     if (savedTheme && savedTheme !== darkMode) {
       dispatch(toggleTheme());
     }
+    
+    // const currenData = new Date();
+    // if(currenData.getHours() >= 18 && darkMode !== 'dark'){
+    //   dispatch(toggleTheme())
+    // }
 
   }, [dispatch]);
 

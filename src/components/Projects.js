@@ -77,9 +77,9 @@ function Projects() {
   
   return (
     <>
-      <div className="w-full h-screen pt-9 dark:bg-[#292929] relative">
+      <div className="w-full pb-28 dark:bg-[#292929] relative">
         <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
-          <div className="text-xl pb-5">
+          <div className="text-xl pb-14">
             <p>&#60;Projects &#47;&#62;</p>
           </div>
           <Swiper
@@ -109,35 +109,37 @@ function Projects() {
               ProjectList.map((e,i)=>{
                 return(
                   <SwiperSlide key={i}>
-                    <div className="max-w-xl rounded-3xl bg-white h-auto dark:bg-[#5c5c5c]">
-                      <img className="w-full" src={e.img} alt={e.title} />
-                      <div className="p-5">
-                        <ul>
-                          <li className="font-[800] text-2xl">{e.title}</li>
-                          <li className="text-[#C3C3C3]">{e.type}</li>
-                          <li>{e.desc}</li>
-                          <br />
-                          <li>기간 : {e.duration}</li>
-                          <li>기술 : {e.skills}</li>
-                          <li>기여도 : {e.contribution}</li>
-                        </ul>
-                        <div className="flex space-x-5 pt-5">
-                          {
-                            Buttons.map((e,i)=>{
-                              return(
-                                <div key={i} className={`px-5 py-1 w-auto cursor-pointer ${theme === "dark" ? e.bgDark : e.bgLight} rounded-md`}>
-                                  <ul className="flex">
-                                    <li>
-                                      <FontAwesomeIcon icon={e.icon} className="pr-1" />
-                                    </li>
-                                    <li>
-                                      <p>{e.text}</p>
-                                    </li>
-                                  </ul>
-                                </div>
-                              )
-                            })
-                          }
+                    <div className="max-w-xl bg-white h-auto dark:bg-[#5c5c5c]">
+                      <div className="shadow-[5px_5px_5px_5px_rgba(0,0,0,.09)]">
+                        <img className="w-full" src={e.img} alt={e.title} />
+                        <div className="p-5">
+                          <ul>
+                            <li className="font-[800] text-2xl">{e.title}</li>
+                            <li className="text-[#C3C3C3]">{e.type}</li>
+                            <li>{e.desc}</li>
+                            <br />
+                            <li>기간 : {e.duration}</li>
+                            <li>기술 : {e.skills}</li>
+                            <li>기여도 : {e.contribution}</li>
+                          </ul>
+                          <div className="flex space-x-5 py-5">
+                            {
+                              Buttons.map((e,i)=>{
+                                return(
+                                  <div key={i} className={`px-5 py-1 w-auto cursor-pointer ${theme === "dark" ? e.bgDark : e.bgLight} rounded-md`}>
+                                    <ul className="flex">
+                                      <li>
+                                        <FontAwesomeIcon icon={e.icon} className="pr-1" />
+                                      </li>
+                                      <li>
+                                        <p>{e.text}</p>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                )
+                              })
+                            }
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -147,7 +149,7 @@ function Projects() {
             }
           </Swiper>
         </div>
-        <img className="w-full absolute bottom-0 left-0" src={theme === 'light' ?
+        <img className="w-full pt-24" src={theme === 'light' ?
           "./../Images/wave.svg"
           :
           "./../Images/dark_wave.svg"

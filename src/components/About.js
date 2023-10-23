@@ -21,12 +21,12 @@ function About() {
 
     return (
         <>
-            <div className="w-full pt-9 dark:bg-[#292929]">
+            <div className="w-full pt-28 dark:bg-[#292929]">
                 <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
                     <div className="text-xl">
                         <p>&#60;About &#47;&#62;</p>
                     </div>
-                    <div className="h-auto flex overflow-hidden flex-wrap justify-between pt-5">
+                    <div className="h-auto flex overflow-hidden flex-wrap justify-between pt-10">
                         <div className="lg:basis-2/5 md:basis-2/5 basis-full">
                             <img className='mx-auto' src="./../Images/about_me.jpg" alt="about_me" />
                         </div>

@@ -40,12 +40,12 @@ function Skills() {
   
   return (
     <>
-      <div className="w-full pt-9 dark:bg-[#292929]">
+      <div className="w-full py-28 dark:bg-[#292929]">
         <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
           <div className="text-xl">
             <p>&#60;Skills &#47;&#62;</p>
           </div>
-          <div className="pt-5 space-y-5">
+          <div className="pt-20 space-y-5">
             {
               SkillList.map((e,i)=>{
                 return(
