@@ -27,10 +27,10 @@ function About() {
                         <p>&#60;About &#47;&#62;</p>
                     </div>
                     <div className="h-auto flex overflow-hidden flex-wrap justify-between pt-10">
-                        <div className="lg:basis-2/5 md:basis-2/5 basis-full">
+                        <div className="lg:basis-2/5 basis-full">
                             <img className='mx-auto' src="./../Images/about_me.jpg" alt="about_me" />
                         </div>
-                        <div className="lg:basis-3/5 md:basis-3/5 basis-full sm:pt-5 lg:pl-5 md:pl-5 text-lg">
+                        <div className="lg:basis-3/5 basis-full pt-5 lg:pt-0 lg:pl-5 text-lg">
                             <p>{messages.about1}</p>
                             <p className='py-5'>{messages.about2}
                                 <br/>{messages.about3}
@@ -55,8 +55,8 @@ function About() {
                                     }
                                 </ul>
                             </div>
-                            <div className="flex flex-wrap">
-                                <ul className='space-y-3'>
+                            <div className="flex flex-wrap basis-full">
+                                <ul className='lg:basis-1/2 basis-full space-y-3'>
                                     {
                                         AboutList.map((e,i)=>{
                                             return(
@@ -68,7 +68,7 @@ function About() {
                                         })
                                     }
                                 </ul>
-                                <ul className='lg:pl-10'>
+                                <ul className='lg:basis-1/2 basis-full leading-9'>
                                     <li>
                                         <FontAwesomeIcon icon={faGraduationCap} />  
                                         <p>{messages.education.period1}

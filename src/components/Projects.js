@@ -28,8 +28,8 @@ function Projects() {
       type: '클론코딩',
       desc: '프로젝트 설명 주르르르르륵',
       duration: '',
-      skills: 'react, firebase, redux, tailwindcss',
-      contribution: '30%',
+      skills: 'react, tailwindcss ',
+      contribution: '100%',
     },
     {
       img: './../Images/quiz.svg',
@@ -37,8 +37,8 @@ function Projects() {
       type: '개인 프로젝트',
       desc: '프로젝트 설명 주르르르르륵',
       duration: '',
-      skills: 'react, firebase, redux, tailwindcss',
-      contribution: '30%',
+      skills: 'react, tailwindcss',
+      contribution: '100%',
     },
     {
       img: './../Images/parcel.svg',
@@ -46,8 +46,8 @@ function Projects() {
       type: '개인 프로젝트',
       desc: '프로젝트 설명 주르르르르륵',
       duration: '',
-      skills: 'react, firebase, redux, tailwindcss',
-      contribution: '30%',
+      skills: 'react, typescript, tailwindcss',
+      contribution: '100%',
     },
     {
       img: './../Images/subway.svg',
@@ -55,7 +55,7 @@ function Projects() {
       type: '클론코딩',
       desc: '프로젝트 설명 주르르르르륵',
       duration: '',
-      skills: 'react, firebase, redux, tailwindcss',
+      skills: 'react, styled-components',
       contribution: '100%',
     }
   ]
@@ -77,7 +77,7 @@ function Projects() {
   
   return (
     <>
-      <div className="w-full pb-28 dark:bg-[#292929] relative">
+      <div className="w-full pb-20 dark:bg-[#292929] relative">
         <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
           <div className="text-xl pb-14">
             <p>&#60;Projects &#47;&#62;</p>
@@ -109,12 +109,12 @@ function Projects() {
               ProjectList.map((e,i)=>{
                 return(
                   <SwiperSlide key={i}>
-                    <div className="max-w-xl bg-white h-auto dark:bg-[#5c5c5c]">
-                      <div className="shadow-[5px_5px_5px_5px_rgba(0,0,0,.09)]">
+                    <div className="w-full bg-white h-auto dark:bg-[#5c5c5c]">
+                      <div>
                         <img className="w-full" src={e.img} alt={e.title} />
                         <div className="p-5">
                           <ul>
-                            <li className="font-[800] text-2xl">{e.title}</li>
+                            <li className="font-extrabold text-2xl">{e.title}</li>
                             <li className="text-[#C3C3C3]">{e.type}</li>
                             <li>{e.desc}</li>
                             <br />

@@ -1,6 +1,6 @@
-import { faBurger, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { faBurger, faGlobe, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setLanguage } from '../store';
 
@@ -13,6 +13,12 @@ function Nav() {
         dispatch(setLanguage(lang));
     }
 
+    const [hamburger, setHamburger] = useState(false)
+
+    const toggleHamburger = () => {
+        setHamburger(!hamburger)
+    }
+
     const NavList = ['About', 'Skills', 'Projects', 'Contact']
 
     return (
@@ -20,24 +26,44 @@ function Nav() {
                 <div className="w-full bg-white px-5 sticky top-0 py-3 z-50 dark:bg-[#292929]">
                     <div className="flex items-center justify-between max-w-7xl mx-auto">
                         <img src="https://via.placeholder.com/120x50" alt="logo" />
-                        <ul className='basis-2/4 justify-between flex dark:text-[#ebf4f1] sm:hidden'>
+                        <div className="hidden lg:block basis-2/4 ">
+                            <ul className='justify-between flex dark:text-[#ebf4f1]'>
+                                {
+                                    NavList.map((e,i)=>{
+                                        return(
+                                            <li key={i} className='cursor-pointer'>
+                                                &#60;{e} &#47;&#62;
+                                            </li>
+                                        )
+                                    })
+                                }
+                                <li>
+                                    <FontAwesomeIcon onClick={()=>changeLanguage(language === 'kr' ? 'en' : 'kr')} className='w-5 h-5 cursor-pointer' icon={faGlobe} />
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="block lg:hidden">
+                            <div className="transition-all duration-1000 z-[100] cursor-pointer" onClick={() => {toggleHamburger() }}>
+                                {
+                                    hamburger ?
+                                    <FontAwesomeIcon icon={faXmark} className='w-8 h-8 dark:text-white' />
+                                    :
+                                    <FontAwesomeIcon icon={faBurger} className='w-7 h-7 dark:text-white' />
+                                }
+                            </div>
+                        </div>                      
+                    </div>
+                    <div className={`w-full h-auto fixed bg-white dark:bg-[#272929] z-50 px-5 pt-5 top-[74px] left-0 block lg:hidden ${hamburger ? 'block' : 'hidden'}`}>
+                        <ul>        
                             {
                                 NavList.map((e,i)=>{
                                     return(
-                                        <li key={i} className='cursor-pointer'>
+                                        <li key={i} className='pb-5 hover:font-bold cursor-pointer dark:text-[#ebf4f1]'>
                                             &#60;{e} &#47;&#62;
                                         </li>
                                     )
                                 })
-                            }
-                            <li>
-                                <FontAwesomeIcon onClick={()=>changeLanguage(language === 'kr' ? 'en' : 'kr')} className='w-5 h-5 cursor-pointer' icon={faGlobe} />
-                            </li>
-                        </ul>
-                        <ul className='sm:block hidden'>
-                            <li>
-                                <FontAwesomeIcon icon={faBurger} className='text-3xl cursor-pointer'/>
-                            </li>
+                            }                                                   
                         </ul>
                     </div>
                 </div>
