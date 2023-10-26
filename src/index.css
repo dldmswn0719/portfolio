@@ -11,16 +11,31 @@ html,body{width: 100%; height: 100%;}
 .wavify:nth-child(2) > div{height: 80%;}
 
 @media screen and (min-width: 1024px) { /* pc 버전일 때 */
-    .swiper-button-next:after, .swiper-button-prev:after {
-        position: absolute;
+
+    .swiper-button-next {
+        right: 10% !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+      }
+      .swiper-button-next svg{
         color: #C7E8CF;
+      }
+      
+    .swiper-button-prev {
+        left: 10% !important;
+        top: 50% !important;
+        transform: translateY(-50%);
     }
-    .swiper-button-next:after {
-        right: 0;
+
+    .swiper-button-prev svg{
+        color: #C7E8CF;
+      }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      display: none;
     }
-    .swiper-button-prev:after {
-        left: 0;
-    }
+
     .swiper-pagination-bullet-active {
         --swiper-theme-color: rgba(255, 255, 255, 0.8);
         --swiper-pagination-bullet-width: 30px;
@@ -29,16 +44,31 @@ html,body{width: 100%; height: 100%;}
     }
 }
 @media screen and (min-width: 768px) { /* tablet 버전일 때 */
-    .swiper-button-next:after, .swiper-button-prev:after {
-        position: absolute;
+
+   .swiper-button-next {
+        right: 10% !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+      }
+      .swiper-button-next svg{
         color: #C7E8CF;
+      }
+      
+    .swiper-button-prev {
+        left: 10% !important;
+        top: 50%  !important;
+        transform: translateY(-50%);
     }
-    .swiper-button-next:after {
-        right: 0;
+    
+    .swiper-button-prev svg{
+        color: #C7E8CF;
+      }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      display: none;
     }
-    .swiper-button-prev:after {
-        left: 0;
-    }
+
     .swiper-pagination-bullet-active {
         --swiper-theme-color: rgba(255, 255, 255, 0.8);
         --swiper-pagination-bullet-width: 30px;
@@ -47,15 +77,29 @@ html,body{width: 100%; height: 100%;}
     }
 }
 @media screen and (max-width: 767px) { /* mobile 버전일 때 */
-    .swiper-button-next:after, .swiper-button-prev:after {
-        position: absolute;
+
+    .swiper-button-next {
+        right: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
+      }
+      .swiper-button-next svg{
         color: #C7E8CF;
+      }
+      
+    .swiper-button-prev {
+        left: 10px !important;
+        top: 50% !important;
+        transform: translateY(-50%);
     }
-    .swiper-button-next:after {
-        right: 0;
-    }
-    .swiper-button-prev:after {
-        left: 0;
+    
+    .swiper-button-prev svg{
+        color: #C7E8CF;
+      }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      display: none;
     }
     .swiper-pagination-bullet-active {
         --swiper-theme-color: rgba(255, 255, 255, 0.8);

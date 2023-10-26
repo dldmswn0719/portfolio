@@ -31,6 +31,7 @@ function Inner() {
     // if(currenData.getHours() >= 18 && darkMode !== 'dark'){
     //   dispatch(toggleTheme())
     // }
+    // 저녁6시 이후 자동 다크모드 적용 ( 아직 미완성 )
 
   }, [dispatch]);
 

@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 
 function Projects() {
@@ -90,7 +90,7 @@ function Projects() {
               delay: 1000,
               disableOnInteraction: false,
             }}
-            navigation={{ clickable: true }}
+            navigation={{ clickable: true , nextEl : ".swiper-button-next" , prevEl : ".swiper-button-prev"}}
             pagination={{ clickable: true }}
             modules={[Autoplay, Navigation, Pagination]}
             id="swiper"
@@ -148,6 +148,13 @@ function Projects() {
               })
             }
           </Swiper>
+          <div className="swiper-button-next">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </div>
+          <div className="swiper-button-prev">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </div>
+          <div className="swiper-pagination-bullet-active"></div>
         </div>
         <img className="w-full pt-24" src={theme === 'light' ?
           "./../Images/wave.svg"

@@ -1,0 +1,54 @@
+{
+    "en": {
+        "maintitle": "Hello : ) I'm Eunju Lee, a new frontend developer.",
+        "about1": "Hello! I'm a junior developer, Eunju Lee.",
+        "about2": "I strive to create ongoing opportunities for growth by setting new tasks for myself.",
+        "about3": "I have an attitude that does not fear change, keeping pace with the changing world.",
+        "about4": "Rather, I enjoy new challenges and cherish the opportunities for growth they give me.",
+        "about5": "With continuous learning and challenges in the future, As a ",
+        "about6": "frontend developer,",
+        "about7": "I will continue my path.",
+        "hashtags": ["Positive", "Persistent", "Inclusive"],
+        "about": {
+            "birthday": "99.07.19",
+            "location": "Daegu Dalseo-gu",
+            "email": "dldmswn071918@gmail.com",
+            "github": "Git"
+        },
+        "education": {
+            "period1": "2023.06~2023.11",
+            "desc1": "Green Computer Art School 900H",
+            "desc2" : "React-based Front-end Developer Training",
+            "desc3" : "(SPA Project Development)",
+            "period2": "2018.03~2022.02",
+            "desc4": "Yeungnam University of Science and Technology (Physiotherapy)"
+      }
+    },
+
+
+    "kr": {
+        "maintitle": "안녕하세요 : ) 신입 프론트엔드 개발자 이은주입니다.",
+        "about1" : "안녕하세요! 저는 주니어 개발자 이은주입니다.",
+        "about2" : "저는 스스로에게 새로운 과제를 내면서 계속해서 발전할 수 있는 기회를 만들려고 노력합니다.",
+        "about3" : "세상이 변화하는 속도에 발맞춰 가면서도 변화를 두려워하지 않는 태도를 가지고 있습니다.",
+        "about4" : "오히려 새로운 도전을 즐기며 저에게 주는 성장의 기회를 소중히 여깁니다.",
+        "about5" : "앞으로도 지속적인 학습과 도전으로",
+        "about6" : "프론트엔드 개발자",
+        "about7" : "로서의 길을 걷겠습니다.",
+        "hashtags": ["긍정적인", "근성있는", "포용력있는"],
+        "about": {
+            "birthday": "99.07.19",
+            "location": "대구광역시 달서구",
+            "email": "dldmswn071918@gmail.com",
+            "github": "깃허브"
+        },
+        "education": {
+            "period1": "2023.06~2023.11",
+            "desc1": "그린컴퓨터아트학원 900H",
+            "desc2": "React를 활용한 프론트엔드 개발자 양성",
+            "desc3" : "(SPA 프로젝트 개발)",
+            "period2": "2018.03~2022.02",
+            "desc4": "영남이공대학교 (물리치료과)"
+        }
+    }
+}

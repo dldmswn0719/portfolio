@@ -1,13 +1,12 @@
 import React from "react";
 import Wave_c from "./Wave_c";
-import enMessages from './../locales/en.json';
-import krMessages from './../locales/kr.json';
 import { useSelector } from "react-redux";
+import localeData  from './../locales/enkr.json';
 
 function Main() {
 
   const language = useSelector(state => state.language);
-  const messages = language === 'en' ? enMessages : krMessages;
+  const messages  = localeData[language]
 
   return (
     <>
