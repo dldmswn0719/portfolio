@@ -27,11 +27,11 @@ function Inner() {
       dispatch(toggleTheme());
     }
     
-    // const currenData = new Date();
-    // if(currenData.getHours() >= 18 && darkMode !== 'dark'){
-    //   dispatch(toggleTheme())
-    // }
-    // 저녁6시 이후 자동 다크모드 적용 ( 아직 미완성 )
+    const currenData = new Date();
+    if(savedTheme && currenData.getHours() >= 17 && darkMode !== 'dark'){
+      dispatch(toggleTheme())
+    }
+    // 저녁6시 이후 자동 다크모드 적용
 
   }, [dispatch]);
 

@@ -23,7 +23,7 @@ function Wave_c() {
       </div>
       <div className="absolute bottom-0 w-full h-[360px] wavify">
         <Wave
-          fill= {darkMode === 'dark' ? "#4f4f4f" : "#E2F9DC"}
+          fill= {darkMode === 'dark' ? "#696969" : "#E2F9DC"}
           paused={false}
           options={{
             height: 20,
@@ -36,7 +36,7 @@ function Wave_c() {
       </div>
       <div className="absolute bottom-0 w-full h-[300px] wavify">
         <Wave
-          fill= {darkMode === 'dark' ? "#292929" : "#C7E8CF"}
+          fill= {darkMode === 'dark' ? "#4f4f4f" : "#C7E8CF"}
           paused={false}
           options={{
             height: 20,

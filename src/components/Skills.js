@@ -43,28 +43,28 @@ function Skills() {
     setSelectedCategory(category);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const currentIndex = SkillList.findIndex((item) => item.category === selectedCategory);
-      const nextIndex = (currentIndex + 1) % SkillList.length;
-      setSelectedCategory(SkillList[nextIndex].category);
-    }, 8000); 
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     const currentIndex = SkillList.findIndex((item) => item.category === selectedCategory);
+  //     const nextIndex = (currentIndex + 1) % SkillList.length;
+  //     setSelectedCategory(SkillList[nextIndex].category);
+  //   }, 8000); 
 
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [selectedCategory, SkillList]);
+  //   return () => {
+  //     clearTimeout(timer);
+  //   };
+  // }, [selectedCategory, SkillList]);
 
   return (
     <>
-      <div className="w-full lg:pt-28 md:pt-16 pt-10 pb-28 dark:bg-[#292929]">
+      <div className="w-full lg:pt-28 md:pt-16 pt-10 lg:pb-28 md:pb-16 pb-10 dark:bg-[#292929]">
         <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
           <div className="text-xl">
             <p>&#60;Skills &#47;&#62;</p>
           </div>
           <div className="pt-20">
-            <div className="flex">
-              <div className="basis-[20%]">
+            <div className="flex items-start">
+              <div className="basis-[15%] sticky top-[68px]">
                 <ul className="flex flex-col space-y-5">
                   {
                     SkillList.map((e, i) => {
@@ -85,14 +85,14 @@ function Skills() {
                   }
                 </ul>
               </div>
-              <div className="basis-[80%]">
-                <ul className="flex flex-wrap pl-5">
+              <div className="basis-[85%]">
+                <ul className="flex flex-wrap pl-10">
                   {
                     SkillList.filter((e) => e.category === selectedCategory).map((filteredItem) => {
                       return(
                         filteredItem.items.map((el, index) => {
                           return(
-                            <li key={index} className="w-[300px] h-auto border-2 border-gray-300 p-4 m-2 rounded dark:bg-gray-600 dark:border-none">
+                            <li key={index} className="basis-full lg:basis-[30%] md:basis-[47%] border border-gray-300 p-4 m-2 rounded dark:bg-gray-600 dark:border-none flex flex-col justify-center items-center">
                               <img className="w-24 h-24" src={el.src} alt={el.alt} />
                               <p className="pt-2">{el.txt}</p>
                             </li>

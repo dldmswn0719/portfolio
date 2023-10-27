@@ -6,6 +6,8 @@ import { setLanguage } from '../store';
 
 function Nav() {
 
+    const theme = useSelector(state => state.dark)
+
     const language = useSelector(state => state.language);
     const dispatch = useDispatch()
     const changeLanguage = (lang) => {
@@ -23,9 +25,11 @@ function Nav() {
 
     return (
             <>
-                <div className="w-full bg-white px-5 sticky top-0 py-3 z-50 dark:bg-[#292929]">
+                <div className="w-full bg-white px-5 sticky top-0 py-4 z-50 dark:bg-[#292929]">
                     <div className="flex items-center justify-between max-w-7xl mx-auto">
-                        <img src="https://via.placeholder.com/120x50" alt="logo" />
+                        <img className='w-32 h-9' src={
+                            theme === 'light' ? './../Images/logo.png' : './../Images/logo_dark.png'
+                        } alt="logo" />
                         <div className="hidden lg:block basis-2/4 ">
                             <ul className='justify-between flex dark:text-[#ebf4f1]'>
                                 {
@@ -46,14 +50,14 @@ function Nav() {
                             <div className="transition-all duration-1000 z-[100] cursor-pointer" onClick={() => {toggleHamburger() }}>
                                 {
                                     hamburger ?
-                                    <FontAwesomeIcon icon={faXmark} className='w-8 h-8 dark:text-white' />
+                                    <FontAwesomeIcon icon={faXmark} className='w-8 h-8 dark:text-white text-[#C7E8CF]' />
                                     :
-                                    <FontAwesomeIcon icon={faBurger} className='w-7 h-7 dark:text-white' />
+                                    <FontAwesomeIcon icon={faBurger} className='w-7 h-7 dark:text-white text-[#C7E8CF]' />
                                 }
                             </div>
                         </div>                      
                     </div>
-                    <div className={`w-full h-auto fixed bg-white dark:bg-[#272929] z-50 px-5 pt-5 top-[74px] left-0 block lg:hidden ${hamburger ? 'block' : 'hidden'}`}>
+                    <div className={`w-full h-auto fixed bg-white dark:bg-[#292929] z-50 px-5 pt-5 top-[69px] left-0 block lg:hidden ${hamburger ? 'block' : 'hidden'}`}>
                         <ul>        
                             {
                                 NavList.map((e,i)=>{
