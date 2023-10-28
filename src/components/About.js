@@ -9,6 +9,7 @@ function About() {
 
     const language = useSelector(state => state.language);
     const messages  = localeData[language]
+    const theme = useSelector(state => state.dark);
 
     const AboutList = [
         { icon: faCakeCandles, text: messages.about.birthday },
@@ -21,14 +22,16 @@ function About() {
 
     return (
         <>
-            <div className="w-full lg:pt-28 md:pt-16 pt-10 dark:bg-[#292929]">
+            <div className="w-full lg:pt-24 md:pt-16 pt-10 dark:bg-[#292929]">
                 <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
                     <div className="text-xl">
                         <p>&#60;About &#47;&#62;</p>
                     </div>
                     <div className="h-auto flex overflow-hidden flex-wrap justify-between pt-10">
                         <div className="lg:basis-2/5 md:basis-[50%] basis-full">
-                            <img className='mx-auto' src="./../Images/about_me.jpg" alt="about_me" />
+                            <img className='mx-auto' src={
+                                theme === "light" ? './../Images/about_me.jpg' : './../Images/about_me_dark.jpg'
+                            } alt="about_me" />
                         </div>
                         <div className="lg:basis-3/5 md:basis-[50%] basis-full pt-5 lg:pt-0 md:pl-5 md:pt-0 lg:pl-5 text-base lg:text-lg">
                             <p>{messages.about1}</p>
@@ -56,7 +59,7 @@ function About() {
                                         AboutList.map((e,i)=>{
                                             return(
                                                 <li key={i} className='flex'>
-                                                    <FontAwesomeIcon icon={e.icon} />
+                                                    <FontAwesomeIcon className='pt-1' icon={e.icon} />
                                                     <p className='pl-3'>{e.text}</p>
                                                 </li>
                                             )
@@ -64,8 +67,8 @@ function About() {
                                     }
                                 </ul>
                                 <ul className='lg:basis-1/2 basis-full leading-9'>
-                                    <li>
-                                        <FontAwesomeIcon icon={faGraduationCap} />  
+                                    <li className='flex'>
+                                        <FontAwesomeIcon className='lg:pt-1.5 pt-2 lg:pr-3 pr-2' icon={faGraduationCap} />  
                                         <p>{messages.education.period1}
                                             <br/>{messages.education.desc1}
                                             <br/>{messages.education.desc2}

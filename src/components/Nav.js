@@ -57,7 +57,7 @@ function Nav() {
                             </div>
                         </div>                      
                     </div>
-                    <div className={`w-full h-auto fixed bg-white dark:bg-[#292929] z-50 px-5 pt-5 top-[69px] left-0 block lg:hidden ${hamburger ? 'block' : 'hidden'}`}>
+                    <div className={`w-full h-auto fixed bg-white dark:bg-[#292929] z-50 px-5 pt-5 top-[68px] left-0 block lg:hidden ${hamburger ? 'block' : 'hidden'}`}>
                         <ul>        
                             {
                                 NavList.map((e,i)=>{

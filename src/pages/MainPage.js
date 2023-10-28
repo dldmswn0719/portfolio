@@ -5,6 +5,7 @@ import About from '../components/About'
 import Skills from '../components/Skills'
 import Projects from '../components/Projects'
 import Contact from '../components/Contact'
+import ProjectsTest from '../components/ProjectsTest'
 
 function MainPage() {
     return (
@@ -14,6 +15,7 @@ function MainPage() {
                 <About />
                 <Skills />
                 <Projects />
+                <ProjectsTest />
                 <Contact />
             </>
         )

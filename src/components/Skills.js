@@ -43,21 +43,9 @@ function Skills() {
     setSelectedCategory(category);
   };
 
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     const currentIndex = SkillList.findIndex((item) => item.category === selectedCategory);
-  //     const nextIndex = (currentIndex + 1) % SkillList.length;
-  //     setSelectedCategory(SkillList[nextIndex].category);
-  //   }, 8000); 
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //   };
-  // }, [selectedCategory, SkillList]);
-
   return (
     <>
-      <div className="w-full lg:pt-28 md:pt-16 pt-10 lg:pb-28 md:pb-16 pb-10 dark:bg-[#292929]">
+      <div className="w-full lg:pt-24 md:pt-16 pt-10 lg:pb-28 md:pb-16 pb-10 dark:bg-[#292929]">
         <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
           <div className="text-xl">
             <p>&#60;Skills &#47;&#62;</p>
