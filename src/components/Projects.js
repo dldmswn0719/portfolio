@@ -11,7 +11,6 @@ import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 
 function Projects() {
   const theme = useSelector(state => state.dark);
-  const [selectedCategory, setSelectedCategory] = useState("전체");
 
   const ProjectList = [
     {
@@ -93,14 +92,6 @@ function Projects() {
           <div className="text-xl pb-8">
             <p>&#60;Projects &#47;&#62;</p>
           </div>
-          <div className="pb-6">
-            <ul className="flex justify-end space-x-2 relative">
-              <li onClick={() => setSelectedCategory("전체")} className="after:w-14 after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-[-4px] after:right-0">전체</li>
-              <li onClick={() => setSelectedCategory("팀 프로젝트")}>팀프로젝트</li>
-              <li onClick={() => setSelectedCategory("개인 프로젝트")}>개인프로젝트</li>
-              <li onClick={() => setSelectedCategory("클론코딩")}>클론코딩</li>
-            </ul>
-          </div>
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
@@ -127,7 +118,7 @@ function Projects() {
             }}
           >
             {
-              ProjectList.filter(project => selectedCategory === "전체" || project.type === selectedCategory).map((e,i)=>{
+              ProjectList.map((e,i)=>{
                 return(
                   <SwiperSlide key={i}>
                     <div className="w-full bg-white h-auto dark:bg-[#5c5c5c] border dark:border-none">

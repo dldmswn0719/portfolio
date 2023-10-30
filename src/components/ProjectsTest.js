@@ -95,7 +95,7 @@ function ProjectsTest() {
                 {
                     Categories.map((e,i)=>{
                         return(
-                            <li key={i} onClick={() => setSelectedCategory(e)} className={`after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-[-4px] after:left-0 after:right-0 relative ${selectedCategory === e ? "after:block" : "after:hidden"}`}>
+                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-[-4px] after:left-0 after:right-0 relative ${selectedCategory === e ? "after:block" : "after:hidden"}`}>
                                 {e}
                             </li>
                         )

@@ -7,23 +7,23 @@ function Skills() {
     {
       category: 'frontend',
       items: [
-        {src:'./../Images/HTML.svg', alt:"HTML" , txt : "마크업"},
-        {src:'./../Images/CSS.svg', alt:"CSS" , txt : "프로젝트의 디자인에 알맞은 스타일을 적용할 수 있습니다."},
-        {src:'./../Images/Javascript.svg', alt:"Javascript" , txt : "javaScript 문법에 대한 이해를 바탕으로 적절한 로직을 구현 할 수 있습니다. ES6이상의 문법을 활용할 수 있습니다."},
-        {src:'./../Images/Scss.svg', alt:"Scss" , txt : "CSS의 가독성을 높이고, 유지보수에 용이하게 SCSS를 작성할 수 있습니다."},
+        {src:'./../Images/HTML.svg', alt:"HTML" , txt : "웹 표준과 접근성 지침을 준수하여 다양한 웹 페이지를 구축할 수 있습니다."},
+        {src:'./../Images/CSS.svg', alt:"CSS" , txt : " 다양한 스타일링 기법과 선택자를 사용하여 웹 페이지의 디자인과 레이아웃을 구현할 수 있습니다."},
+        {src:'./../Images/Javascript.svg', alt:"Javascript" , txt : "javascript의 DOM 조작과 이벤트 처리 등의 핵심 개념에 익숙합니다. ES6이상의 문법을 활용할 수 있습니다."},
+        {src:'./../Images/Scss.svg', alt:"Scss" , txt : "CSS의 가독성을 높이고, 유지보수에 용이하게 SCSS를 작성할 수 있습니다. 변수, 믹스인, 중첩 등을 적극 활용하여 스타일링을 효율적으로 구성할 수 있습니다."},
         {src:'./../Images/Styled-components.svg', alt:"Styled-components" , txt : "컴포넌트의 레이아웃을 구성할 수 있고 컴포넌트에 props 전달을 통해 스타일을 동적으로 변경할 수 있습니다."},
-        {src:'./../Images/Tailwind_CSS.svg', alt:"Tailwind_CSS" , txt : "마크업"},
-        {src:'./../Images/NEXT.js.svg', alt:"NEXT.js" , txt : "마크업"},
-        {src:'./../Images/React.svg', alt:"React" , txt : "컴포넌트의 재사용성을 고려해 컴포넌트를 구현할 수 있습니다. 다양한 React Hooks를 사용할 수 있습니다."},
-        {src:'./../Images/TS.svg', alt:"TS" , txt : "TypeScript를 사용하여 원하는 기능을 사용할 수 있습니다."}
+        {src:'./../Images/Tailwind_CSS.svg', alt:"Tailwind_CSS" , txt : "반응형 웹 디자인을 구현할 수 있습니다. 유틸리티 클래스를 사용하여 모바일, 태블릿, 데스크톱 등 다양한 디바이스에 맞춘 레이아웃을 빠르게 제작할 수 있습니다."},
+        {src:'./../Images/NEXT.js.svg', alt:"NEXT.js" , txt : "고민중"},
+        {src:'./../Images/React.svg', alt:"React" , txt : "컴포넌트 재사용성을 극대화하여 코드의 효율성을 높이고 다양한 React Hooks를 사용할 수 있습니다."},
+        {src:'./../Images/TS.svg', alt:"TS" , txt : "TypeScript를 활용하여 자바스크립트 코드에 타입을 명시적으로 적용할 수 있습니다. 이를 통해 코드의 안정성을 높이고, 예상치 못한 오류를 사전에 방지할 수 있습니다."}
       ],
     },
     {
       category: 'backend, database',
       items: [
-        { src: './../Images/node.js.svg', alt: 'node.js' , txt : "마크업"},
-        { src: './../Images/mongoDB.svg', alt: 'mongoDB' , txt : "마크업"},
-        { src: './../Images/Firebase.svg', alt: 'Firebase' , txt : "마크업"},
+        { src: './../Images/node.js.svg', alt: 'node.js' , txt : "비동기 I/O 처리를 이해하고 있으며, 간단한 백엔드 로직을 구현하는데 필요한 기본적인 Node.js 기능을 사용할 수 있습니다."},
+        { src: './../Images/mongoDB.svg', alt: 'mongoDB' , txt : "간단한 데이터 조작을 위한 CRUD 연산을 수행할 수 있으며, MongoDB를 활용한 데이터 관리의 기본적인 방법을 숙지하고 있습니다."},
+        { src: './../Images/Firebase.svg', alt: 'Firebase' , txt : "Google의 Firebase를 활용하여 실시간 데이터베이스와 사용자 인증 등의 백엔드 서비스를 간편하게 이용할 수 있습니다. 이를 통해 애플리케이션의 개발 시간을 단축하고 효율적으로 관리할 수 있습니다."},
         { src: './../Images/MySQL.svg', alt: 'MySQL' , txt : "마크업"},
       ],
     },

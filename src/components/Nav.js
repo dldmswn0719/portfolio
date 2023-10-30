@@ -35,7 +35,8 @@ function Nav() {
                                 {
                                     NavList.map((e,i)=>{
                                         return(
-                                            <li key={i} className='cursor-pointer'>
+                                            <li key={i} className='cursor-pointer relative hover:after:w-full hover:after:h-0.5 hover:after:absolute hover:after:bg-[#C7E8CF] hover:after:bottom-[-10px] hover:after:left-0
+                                            after:w-0 after:duration-500 dark:hover:after:bg-[#fff]'>
                                                 &#60;{e} &#47;&#62;
                                             </li>
                                         )
