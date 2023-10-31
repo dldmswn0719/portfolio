@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useState } from "react";
 
-function Skills() {
+const Skills = forwardRef((props, ref) => {
   const [selectedCategory, setSelectedCategory] = useState("frontend");
 
   const SkillList = [
@@ -45,7 +45,7 @@ function Skills() {
 
   return (
     <>
-      <div className="w-full lg:pt-24 md:pt-16 pt-10 lg:pb-28 md:pb-16 pb-10 dark:bg-[#292929]">
+      <div ref={ref} className="w-full lg:pt-24 md:pt-16 pt-10 lg:pb-28 md:pb-16 pb-10 dark:bg-[#292929]">
         <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
           <div className="text-xl">
             <p>&#60;Skills &#47;&#62;</p>
@@ -97,6 +97,6 @@ function Skills() {
       </div>
     </>
   );
-}
+});
 
 export default Skills;

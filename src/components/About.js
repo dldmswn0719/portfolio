@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCakeCandles, faEnvelope, faGraduationCap, faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import localeData  from './../locales/enkr.json';
 
-function About() {
+const About = forwardRef((props, ref) => {
 
     const language = useSelector(state => state.language);
     const messages  = localeData[language]
@@ -22,7 +22,7 @@ function About() {
 
     return (
         <>
-            <div className="w-full lg:pt-24 md:pt-16 pt-10 dark:bg-[#292929]">
+            <div ref={ref} className="w-full lg:pt-24 md:pt-16 pt-10 dark:bg-[#292929]">
                 <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
                     <div className="text-xl">
                         <p>&#60;About &#47;&#62;</p>
@@ -85,6 +85,6 @@ function About() {
             </div>
         </>
     )
-}
+});
 
 export default About

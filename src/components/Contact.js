@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-function Contact() {
+const Contact = forwardRef((props, ref) => {
     return (
         <>
-            <div className="w-full dark:bg-[#292929]">
+            <div ref={ref} className="w-full dark:bg-[#292929]">
                 <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
                     <div className="text-xl lg:pb-20 pb-10 pl-5 lg:pl-0 md:pl-0">
                         <p>&#60;Contact &#47;&#62;</p>
@@ -31,6 +31,6 @@ function Contact() {
             </div>
         </>
     )
-}
+});
 
 export default Contact

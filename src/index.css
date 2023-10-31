@@ -30,3 +30,5 @@ html,body{width: 100%; height: 100%;}
 
   .swiper-pagination-fractions{padding-top: 20px; text-align: center;}  
 }
+
+::selection { color:black; background:#E2F9DC; }
