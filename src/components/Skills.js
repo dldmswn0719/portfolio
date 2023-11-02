@@ -74,7 +74,7 @@ const Skills = forwardRef((props, ref) => {
                 </ul>
               </div>
               <div className="basis-[85%]">
-                <ul className="flex flex-wrap pl-10">
+                <ul className="flex flex-wrap lg:pl-10 md:pl-6 pl-5">
                   {
                     SkillList.filter((e) => e.category === selectedCategory).map((filteredItem) => {
                       return(

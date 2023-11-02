@@ -111,12 +111,12 @@ const Projects = forwardRef((props, ref) => {
               <div className="swiper-pagination-fractions"></div>
             </>
             :
-            <div className="flex flex-wrap gap-5">
+            <div className="flex flex-wrap justify-between">
               {
                 ProjectList.filter(project => selectedCategory === "전체" || project.type === selectedCategory).map((e,i)=>{
                   return(
                       // <div key={i} className="shadow-[0_3px_8px_0_rgba(0,0,0,.15)] basis-full lg:basis-[31.5%] md:basis-[48%] flex bg-white h-auto dark:bg-[#5c5c5c] dark:border-none">
-                      <div key={i} className="border basis-full lg:basis-[31.5%] md:basis-[48%] flex bg-white h-auto dark:bg-[#5c5c5c] dark:border-none">
+                      <div key={i} className="basis-full md:basis-[49%] lg:basis-[32.5%] mb-4 bg-white h-auto dark:bg-[#5c5c5c] border dark:border-none">
                           <ProjectCard project={e} theme={theme} buttons={Buttons} />
                       </div>
                   )
