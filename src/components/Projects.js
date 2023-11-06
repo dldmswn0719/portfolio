@@ -14,10 +14,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Projects = forwardRef((props, ref) => {
   const theme = useSelector(state => state.dark);
   const [selectedCategory, setSelectedCategory] = useState("전체");
-  const [selectSwiper,setSelectSwiper] = useState("박스 보기")
+  const [selectSwiper,setSelectSwiper] = useState("박스 보기");
 
   const Categories = ["전체", "팀 프로젝트", "개인 프로젝트", "클론코딩"];
-  const CateSwiper = ["슬라이드 보기" , "박스 보기" ]
+  const SwiperCategory = ["슬라이드 보기" , "박스 보기"]
 
   const Buttons = [
     {
@@ -46,27 +46,30 @@ const Projects = forwardRef((props, ref) => {
                 {
                     Categories.map((e,i)=>{
                         return(
-                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-[-4px] after:left-0 after:right-0 relative ${selectedCategory === e ? "after:block" : "after:hidden"}`}>
+                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-[-4px] after:left-0 after:right-0 dark:after:bg-[#5c5c5c] relative ${selectedCategory === e ? "after:block" : "after:hidden"}`}>
                                 {e}
                             </li>
                         )
                     })
                 }
             </ul>
-            <ul className="flex space-x-2 relative">
-              {/* {
-                CateSwiper.map((e,i)=>{
+            <ul className="flex space-x-2 relative pr-1.5">
+              {
+                SwiperCategory.map((e,i)=>{
                   return(
-                    <li key={i} onClick={()=>setSelectSwiper(e)}>{e}</li>
+                    <>
+                      <li key={i} className="cursor-pointer" onClick={()=>setSelectSwiper(e)}>
+                        {
+                          e === "슬라이드 보기" ?
+                          <img className="w-6 h-6" src={theme === 'light' ? './../Images/slideicon.png' : './../Images/slideicon_dark.png'} alt="슬라이드 아이콘" />
+                          :
+                          <FontAwesomeIcon className="mt-1 ml-1" icon={faTableCellsLarge} />
+                        }
+                      </li>
+                    </>
                   )
                 })
-              } */}
-              <li className="cursor-pointer" onClick={()=>setSelectSwiper("슬라이드 보기")}>
-                <img src={theme === 'light' ? './../Images/slideicon.png' : './../Images/slideicon_dark.png'} alt="슬라이드 아이콘" />
-              </li>
-              <li className="cursor-pointer" onClick={()=>setSelectSwiper("박스 보기")}>
-                <FontAwesomeIcon icon={faTableCellsLarge} />
-              </li>
+              }
             </ul>
           </div>
           {
@@ -111,12 +114,11 @@ const Projects = forwardRef((props, ref) => {
               <div className="swiper-pagination-fractions"></div>
             </>
             :
-            <div className="flex flex-wrap justify-between">
+            <div className="flex flex-wrap gap-x-3">
               {
                 ProjectList.filter(project => selectedCategory === "전체" || project.type === selectedCategory).map((e,i)=>{
                   return(
-                      // <div key={i} className="shadow-[0_3px_8px_0_rgba(0,0,0,.15)] basis-full lg:basis-[31.5%] md:basis-[48%] flex bg-white h-auto dark:bg-[#5c5c5c] dark:border-none">
-                      <div key={i} className="basis-full md:basis-[49%] lg:basis-[32.5%] mb-4 bg-white h-auto dark:bg-[#5c5c5c] border dark:border-none">
+                      <div key={i} className="basis-full md:basis-[49%] lg:basis-[32.5%] mb-3 h-auto">
                           <ProjectCard project={e} theme={theme} buttons={Buttons} />
                       </div>
                   )
