@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setLanguage } from '../store';
+import { NavLink } from 'react-router-dom';
 
 function Nav({ aboutRef, skillsRef, projectsRef, contactRef }) {
 
@@ -34,9 +35,11 @@ function Nav({ aboutRef, skillsRef, projectsRef, contactRef }) {
             <>
                 <div className="w-full bg-white px-5 sticky top-0 py-4 z-50 dark:bg-[#292929]">
                     <div className="flex items-center justify-between max-w-7xl mx-auto">
-                        <img className='w-32 h-9' src={
-                            theme === 'light' ? './../Images/logo.png' : './../Images/logo_dark.png'
-                        } alt="logo" />
+                        <NavLink to='/'>
+                            <img className='w-32 h-9' src={
+                                theme === 'light' ? './../Images/logo.png' : './../Images/logo_dark.png'
+                            } alt="logo" />
+                        </NavLink>
                         <div className="hidden lg:block basis-2/4 ">
                             <ul className='justify-between flex dark:text-[#ebf4f1]'>
                                 {

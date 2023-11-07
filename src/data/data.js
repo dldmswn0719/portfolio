@@ -1,7 +1,7 @@
 export const ProjectList = [
     {
       img: './../Images/portfolio.svg',
-      title: 'EUNJU PORTFOLIIO',
+      title: 'Portfolio',
       type: '개인 프로젝트',
       desc: '처음으로 만들어본 신입 프론트엔드 개발자 이은주 포트폴리오 사이트입니다.',
       duration: '2023.10.19 ~ ',
@@ -23,7 +23,7 @@ export const ProjectList = [
     },
     {
       img: './../Images/puriproject.svg',
-      title: 'PURIPURI',
+      title: 'Puripuri',
       type: '팀 프로젝트',
       desc: '협업을 하여 만든 유기동물 사이트입니다. 스토어페이지를 담당하였습니다. ',
       duration: '2023.08.21 ~ 10.09',
@@ -67,7 +67,7 @@ export const ProjectList = [
     },
     {
       img: './../Images/quiz.svg',
-      title: 'QUIZ',
+      title: 'Quiz',
       type: '개인 프로젝트',
       desc: 'HTML,CSS,Javascript의 간단한 퀴즈를 맞추는 사이트입니다.',
       duration: '2023.08.30 ~ 09.01',
