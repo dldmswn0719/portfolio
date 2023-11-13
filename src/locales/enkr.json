@@ -13,7 +13,8 @@
             "birthday": "99.07.19",
             "location": "Daegu Dalseo-gu",
             "email": "dldmswn071918@gmail.com",
-            "github": "Github"
+            "github": "Github",
+            "certificate" : "2 types of driver's licenses"
         },
         "education": {
             "period1": "2023.06~2023.11",
@@ -22,9 +23,122 @@
             "desc3" : "(SPA Project Development)",
             "period2": "2018.03~2022.02",
             "desc4": "Yeungnam University of Science and Technology (Physiotherapy)"
-      }
+        },
+        "skills": [
+            {
+              "category": "frontend",
+              "items": [
+                {
+                  "src": "./../Images/HTML.svg",
+                  "alt": "HTML",
+                  "txt": "Can build various web pages adhering to web standards and accessibility guidelines."
+                },
+                {
+                  "src": "./../Images/CSS.svg",
+                  "alt": "CSS",
+                  "txt": "Can implement design and layout of web pages using various styling techniques and selectors."
+                },
+                {
+                  "src": "./../Images/Javascript.svg",
+                  "alt": "Javascript",
+                  "txt": "Familiar with core concepts of JavaScript such as DOM manipulation and event handling. Proficient in ES6+ syntax."
+                },
+                {
+                  "src": "./../Images/Scss.svg",
+                  "alt": "Scss",
+                  "txt": "Can write CSS for readability and maintainability. Proficient in using features like variables, mixins, and nesting for efficient styling."
+                },
+                {
+                  "src": "./../Images/Styled-components.svg",
+                  "alt": "Styled-components",
+                  "txt": "Can structure component layouts and dynamically change styles using props in components."
+                },
+                {
+                  "src": "./../Images/Tailwind_CSS.svg",
+                  "alt": "Tailwind_CSS",
+                  "txt": "Can implement responsive web design. Can quickly create layouts for various devices (mobile, tablet, desktop) using utility classes."
+                },
+                {
+                  "src": "./../Images/NEXT.js.svg",
+                  "alt": "NEXT.js",
+                  "txt": "Understands basic features and concepts of NEXT.js. Has experience using NEXT.js in simple projects and is confident in learning more for deeper utilization."
+                },
+                {
+                  "src": "./../Images/React.svg",
+                  "alt": "React",
+                  "txt": "Maximizes code efficiency through component reusability. Proficient in using various React Hooks."
+                },
+                {
+                  "src": "./../Images/TS.svg",
+                  "alt": "TS",
+                  "txt": "Can apply types explicitly to JavaScript code using TypeScript. Increases code stability and prevents unexpected errors in advance."
+                }
+              ]
+            },
+            {
+              "category": "backend, database",
+              "items": [
+                {
+                  "src": "./../Images/node.js.svg",
+                  "alt": "node.js",
+                  "txt": "Understands asynchronous I/O processing. Can use basic Node.js features required to implement simple backend logic."
+                },
+                {
+                  "src": "./../Images/mongoDB.svg",
+                  "alt": "mongoDB",
+                  "txt": "Can perform CRUD operations for simple data manipulation. Familiar with basic methods of data management using MongoDB."
+                },
+                {
+                  "src": "./../Images/Firebase.svg",
+                  "alt": "Firebase",
+                  "txt": "Can implement real-time databases and develop user authentication features. Efficiently builds a serverless backend, reducing development time and effectively managing applications."
+                },
+                {
+                  "src": "./../Images/MySQL.svg",
+                  "alt": "MySQL",
+                  "txt": "Understands basic SQL syntax. Can perform simple data manipulation and queries. Understands how to connect web applications and databases, extracting and using necessary data."
+                }
+              ]
+            },
+            {
+              "category": "etc",
+              "items": [
+                {
+                  "src": "./../Images/figma.svg",
+                  "alt": "figma",
+                  "txt": "Can implement user-centered UI/UX design."
+                },
+                {
+                  "src": "./../Images/github.svg",
+                  "alt": "github",
+                  "txt": "Systematically performs version management of source code. Increases the efficiency of team projects through work separation with branches and code reviews through pull requests."
+                },
+                {
+                  "src": "./../Images/notion.svg",
+                  "alt": "notion",
+                  "txt": "Can use Notion for documentation."
+                },
+                {
+                  "src": "./../Images/vercel.svg",
+                  "alt": "vercel",
+                  "txt": "Has experience with continuous deployment and deployment. Maintains and manages websites in real-time, deploying and managing web applications efficiently."
+                },
+                {
+                  "src": "./../Images/yarn.svg",
+                  "alt": "yarn",
+                  "txt": "Proficient in package management using Yarn. Maintains project stability by efficiently managing dependencies and versions."
+                }
+              ]
+            }
+        ],
+        "contact1": "I have a desire to always learn new technologies.",
+        "contact2": "This attitude constantly drives me to grow,",
+        "contact3": "becoming the motivation to become a better developer.",
+        "contact4": "Thank you for reading through my portfolio until the end.",
+        "project1" : "duration",
+        "project2" : "skills",
+        "project3" : "contribution"
     },
-
 
     "kr": {
         "maintitle": "안녕하세요 : ) 신입 프론트엔드 개발자 이은주입니다.",
@@ -40,7 +154,8 @@
             "birthday": "99.07.19",
             "location": "대구광역시 달서구",
             "email": "dldmswn071918@gmail.com",
-            "github": "Github"
+            "github": "Github",
+            "certificate" : "운전면허 2종 보통"
         },
         "education": {
             "period1": "2023.06~2023.11",
@@ -49,6 +164,120 @@
             "desc3" : "(SPA 프로젝트 개발)",
             "period2": "2018.03~2022.02",
             "desc4": "영남이공대학교 (물리치료과)"
-        }
+        },
+        "skills": [
+            {
+                "category": "frontend",
+                "items": [
+                  {
+                    "src":"./../Images/HTML.svg",
+                    "alt":"HTML",
+                    "txt" : "웹 표준과 접근성 지침을 준수하여 다양한 웹 페이지를 구축할 수 있습니다."
+                  },
+                  {
+                    "src":"./../Images/CSS.svg",
+                    "alt":"CSS",
+                    "txt" : " 다양한 스타일링 기법과 선택자를 사용하여 웹 페이지의 디자인과 레이아웃을 구현할 수 있습니다."
+                  },
+                  {
+                    "src":"./../Images/Javascript.svg",
+                    "alt":"Javascript",
+                    "txt" : "javascript의 DOM 조작과 이벤트 처리 등의 핵심 개념에 익숙합니다. ES6이상의 문법을 활용할 수 있습니다."
+                  },
+                  {
+                    "src":"./../Images/Scss.svg",
+                    "alt":"Scss",
+                    "txt" : "CSS의 가독성을 높이고, 유지보수에 용이하게 작성할 수 있습니다. 변수, 믹스인, 중첩 등을 적극 활용하여 스타일링을 효율적으로 구성할 수 있습니다."
+                  },
+                  {
+                    "src":"./../Images/Styled-components.svg",
+                    "alt":"Styled-components",
+                    "txt" : "컴포넌트의 레이아웃을 구성할 수 있고 컴포넌트에 props 전달을 통해 스타일을 동적으로 변경할 수 있습니다."
+                  },
+                  {
+                    "src":"./../Images/Tailwind_CSS.svg",
+                    "alt":"Tailwind_CSS",
+                    "txt" : "반응형 웹 디자인을 구현할 수 있습니다. 유틸리티 클래스를 사용하여 모바일, 태블릿, 데스크톱 등 다양한 디바이스에 맞춘 레이아웃을 빠르게 제작할 수 있습니다."
+                  },
+                  {
+                    "src":"./../Images/NEXT.js.svg",
+                    "alt":"NEXT.js" ,
+                    "txt" : "기본적인 기능을 이해하고 있으며,SSR의 개념을 알고 있습니다. 간단한 프로젝트에서 Next.js를 활용한 경험이 있으며, 필요에 따라 추가적인 학습을 통해 더 깊이 있는 활용이 가능하다는 자신감을 가지고 있습니다."
+                  },
+                  {
+                    "src":"./../Images/React.svg",
+                    "alt":"React" ,
+                    "txt" : "컴포넌트 재사용성을 극대화하여 코드의 효율성을 높이고 다양한 React Hooks를 사용할 수 있습니다."
+                  },
+                  {
+                    "src":"./../Images/TS.svg",
+                    "alt":"TS" ,
+                    "txt" : "TypeScript를 활용하여 자바스크립트 코드에 타입을 명시적으로 적용할 수 있습니다. 이를 통해 코드의 안정성을 높이고, 예상치 못한 오류를 사전에 방지할 수 있습니다."
+                  }
+                ]
+              },
+              {
+                "category": "backend, database",
+                "items": [
+                  {
+                    "src": "./../Images/node.js.svg",
+                    "alt": "node.js",
+                    "txt" : "비동기 I/O 처리를 이해하고 있으며, 간단한 백엔드 로직을 구현하는데 필요한 기본적인 Node.js 기능을 사용할 수 있습니다."
+                  },
+                  { 
+                    "src": "./../Images/mongoDB.svg",
+                    "alt": "mongoDB",
+                    "txt" : "간단한 데이터 조작을 위한 CRUD 연산을 수행할 수 있으며, MongoDB를 활용한 데이터 관리의 기본적인 방법을 숙지하고 있습니다."
+                  },
+                  { 
+                    "src": "./../Images/Firebase.svg",
+                    "alt": "Firebase",
+                    "txt" : "실시간 데이터베이스를 구현하고 사용자 인증 기능을 개발할 수 있습니다. 이를 활용하여 서버리스 환경에서 효율적인 백엔드를 구축하며, 애플리케이션의 개발 시간을 단축하고 관리를 효과적으로 수행할 수 있습니다."
+                  },
+                  { 
+                    "src": "./../Images/MySQL.svg",
+                    "alt": "MySQL",
+                    "txt" : "기본적인 SQL 문법을 이해하고 간단한 데이터 조작과 조회를 할 수 있습니다. 또한, 웹 애플리케이션과 데이터베이스를 연동하는 방법에 대한 이해가 있습니다. 이를 바탕으로 필요한 데이터를 추출하고 사용할 수 있습니다."
+                  }
+                ]
+              },
+              {
+                "category": "etc",
+                "items": [
+                  {
+                     "src": "./../Images/figma.svg",
+                     "alt": "figma",
+                     "txt" : "사용자 중심의 UI/UX 디자인을 구현할 수 있습니다."
+                    },
+                  { 
+                    "src": "./../Images/github.svg",
+                    "alt": "github",
+                    "txt" : "소스 코드의 버전 관리를 체계적으로 수행할 수 있습니다. 브랜치를 통한 작업 분리, 풀 리퀘스트를 통한 코드 리뷰 등을 통해 팀 프로젝트의 효율성을 높일 수 있습니다."
+                  },
+                  { 
+                    "src": "./../Images/notion.svg",
+                    "alt": "notion",
+                    "txt" : "Notion을 활용하여 문서화를 진행할 수 있습니다."
+                  },
+                  { 
+                    "src": "./../Images/vercel.svg",
+                    "alt": "vercel",
+                    "txt" : "지속적인 Deployment와 배포를 경험하였습니다. 프로젝트의 변경 사항을 실시간으로 반영하여 웹사이트를 유지보수하며 웹 애플리케이션을 배포하고 관리할 수 있습니다."
+                  },
+                  { 
+                    "src": "./../Images/yarn.svg",
+                    "alt": "yarn",
+                    "txt" : "Yarn을 통한 패키지 관리에 능숙합니다. 의존성 관리와 버전 관리를 효율적으로 진행함으로써 프로젝트의 안정성을 유지할 수 있습니다. "
+                  }
+                ]
+              }
+        ],
+        "contact1" : "항상 새로운 기술을 배우고자 하는 열망이 있습니다.",
+        "contact2" : "이러한 자세는 저를 끊임없이 성장하게 만들며,",
+        "contact3" : "더 나은 개발자가 되기 위한 동력이 됩니다.",
+        "contact4" : "제 포트폴리오를 끝까지 읽어주셔서 감사합니다.",
+        "project1" : "기간",
+        "project2" : "기술",
+        "project3" : "기여도"
     }
 }

@@ -8,18 +8,37 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
-import {ProjectList } from './../data/data'
+import {ProjectList } from './../data/projectList'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Projects = forwardRef((props, ref) => {
+function Projects(props, ref){
   const theme = useSelector(state => state.dark);
   const [selectedCategory, setSelectedCategory] = useState("전체");
   const [selectSwiper,setSelectSwiper] = useState("박스 보기");
+  const language = useSelector(state => state.language);
 
-  const Categories = ["전체", "팀 프로젝트", "개인 프로젝트", "클론코딩"];
+  const Categories = {
+    "en": ["All", "Team Project", "Personal Project", "Clone Coding"],
+    "kr": ["전체", "팀 프로젝트", "개인 프로젝트", "클론 코딩"]
+  };
   const SwiperCategory = ["슬라이드 보기" , "박스 보기"]
 
-  const Buttons = [
+const Buttons = {
+  "en": [
+    {
+      icon: faShareFromSquare,
+      text: "Go to Site",
+      bgLight: "bg-[#B6E2CB]",
+      bgDark: "dark:bg-[#404343]"
+    },
+    {
+      icon: faGithubAlt,
+      text: "Github",
+      bgLight: "bg-[#B6E2CB]",
+      bgDark: "dark:bg-[#404343]"
+    }
+  ],
+  "kr": [
     {
       icon: faShareFromSquare,
       text: "사이트바로가기",
@@ -33,6 +52,9 @@ const Projects = forwardRef((props, ref) => {
       bgDark: "dark:bg-[#404343]"
     }
   ]
+};
+
+  const [select, setSelect] = useState('박스 보기');
 
   return (
     <>
@@ -44,9 +66,9 @@ const Projects = forwardRef((props, ref) => {
           <div className="pb-6 flex justify-between">
             <ul className="flex space-x-2 relative">
                 {
-                    Categories.map((e,i)=>{
+                     Categories[language].map((e,i)=>{
                         return(
-                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-[-4px] after:left-0 after:right-0 dark:after:bg-[#5c5c5c] relative ${selectedCategory === e ? "after:block" : "after:hidden"}`}>
+                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-0 after:left-0 after:right-0 dark:after:bg-[#5c5c5c] relative ${selectedCategory === e ? "after:block" : "after:hidden"}`}>
                                 {e}
                             </li>
                         )
@@ -57,16 +79,16 @@ const Projects = forwardRef((props, ref) => {
               {
                 SwiperCategory.map((e,i)=>{
                   return(
-                    <>
-                      <li key={i} className="cursor-pointer" onClick={()=>setSelectSwiper(e)}>
+                    <React.Fragment key={i}>
+                      <li className={`cursor-pointer ${e === select ? 'border-b-2 border-[#C7E8CF] dark:border-[#5c5c5c]' : ''} w-8 h-8 flex justify-center items-center`} onClick={()=>{setSelectSwiper(e);setSelect(e)}}>
                         {
                           e === "슬라이드 보기" ?
-                          <img className="w-6 h-6" src={theme === 'light' ? './../Images/slideicon.png' : './../Images/slideicon_dark.png'} alt="슬라이드 아이콘" />
+                          <img className="w-8 h-8" src={theme === 'light' ? './../Images/slideimg_black.png' : './../Images/slideimg.png'} alt="슬라이드 아이콘" />
                           :
-                          <FontAwesomeIcon className="mt-1 ml-1" icon={faTableCellsLarge} />
+                          <FontAwesomeIcon className="w-[18px] h-[18px]" icon={faTableCellsLarge} />
                         }
                       </li>
-                    </>
+                    </React.Fragment>
                   )
                 })
               }
@@ -101,15 +123,15 @@ const Projects = forwardRef((props, ref) => {
               },
               }}
               >
-              {
-                ProjectList.filter(project => selectedCategory === "전체" || project.type === selectedCategory).map((e, i) => {
-                return (
-                    <SwiperSlide key={i}>
-                        <ProjectCard project={e} theme={theme} buttons={Buttons} />
-                    </SwiperSlide>
-                );
-                })
-              }
+                {
+                  ProjectList.filter(project => selectedCategory === "전체" || project.type === selectedCategory).map((e, i) => {
+                  return (
+                      <SwiperSlide key={i}>
+                          <ProjectCard project={e} theme={theme} buttons={Buttons} />
+                      </SwiperSlide>
+                  );
+                  })
+                }
               </Swiper>
               <div className="swiper-pagination-fractions"></div>
             </>
@@ -131,6 +153,6 @@ const Projects = forwardRef((props, ref) => {
       </div>
     </>
   );
-});
+};
 
-export default Projects;
+export default forwardRef(Projects);

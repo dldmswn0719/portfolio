@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react';
-import { Route, Routes } from "react-router-dom";
-import MainPage from './pages/MainPage';
+import React, { useEffect , useRef } from 'react';
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import store, { toggleTheme } from "./store";
 import Aside from './components/Aside';
+import Nav from './components/Nav'
+import Main from './components/Main'
+import About from './components/About'
+import Skills from './components/Skills'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -56,14 +60,22 @@ function Inner() {
 
   }, [language]);
 
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
-    <>
-    <Routes>
-      <Route path="/" element={<MainPage />}/>
-    </Routes>
-    <Aside />
-    </>
-  );
+          <>
+            <Nav aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} contactRef={contactRef} />
+            <Main />
+            <About ref={aboutRef} />
+            <Skills ref={skillsRef} />
+            <Projects ref={projectsRef} />
+            <Contact ref={contactRef} />
+            <Aside />
+          </>
+      )
 }
 
 export default App;

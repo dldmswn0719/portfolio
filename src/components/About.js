@@ -1,11 +1,11 @@
 import React, { forwardRef } from 'react'
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCakeCandles, faEnvelope, faGraduationCap, faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faCakeCandles, faCarSide, faEnvelope, faGraduationCap, faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import localeData  from './../locales/enkr.json';
 
-const About = forwardRef((props, ref) => {
+function About(props, ref){
 
     const language = useSelector(state => state.language);
     const messages  = localeData[language]
@@ -15,7 +15,9 @@ const About = forwardRef((props, ref) => {
         { icon: faCakeCandles, text: messages.about.birthday },
         { icon: faHouse, text: messages.about.location },
         { icon: faEnvelope, text: messages.about.email },
-        { icon: faGithubAlt, text: messages.about.github }
+        { icon: faGithubAlt, text: messages.about.github },
+        { icon : faCarSide , text : messages.about.certificate}
+        
     ]
 
     const HashTags = messages.hashtags;
@@ -40,7 +42,7 @@ const About = forwardRef((props, ref) => {
                                 <br/>{messages.about4}
                             </p>
                             <p>{messages.about5}<span className='font-bold'> {messages.about6}</span> {messages.about7}</p>
-                            <div className="py-5">
+                            <div className="pt-10 pb-5">
                                 <ul className='flex space-x-2 text-base lg:text-lg'>
                                     {
                                         HashTags.map((e,i)=>{
@@ -53,13 +55,13 @@ const About = forwardRef((props, ref) => {
                                     }
                                 </ul>
                             </div>
-                            <div className="flex flex-wrap basis-full">
+                            <div className="flex flex-wrap basis-full border-2 rounded-3xl py-5 pl-5 pr-2 lg:py-14 mt-2 lg:mt-5 border-[#C8E9D8] dark:border-[#5c5c5c]">
                                 <ul className='lg:basis-1/2 basis-full space-y-3 text-base lg:text-lg'>
                                     {
                                         AboutList.map((e,i)=>{
                                             return(
-                                                <li key={i} className='flex'>
-                                                    <FontAwesomeIcon className='pt-1' icon={e.icon} />
+                                                <li key={i} className="flex first:pl-0.5">
+                                                    <FontAwesomeIcon className={`pt-1 ${i === 3 && 'w-5 h-5'}`} icon={e.icon} />
                                                     <p className='pl-3'>{e.text}</p>
                                                 </li>
                                             )
@@ -85,6 +87,6 @@ const About = forwardRef((props, ref) => {
             </div>
         </>
     )
-});
+};
 
-export default About
+export default forwardRef(About);
