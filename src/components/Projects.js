@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { faShareFromSquare, faTableCellsLarge } from "@fortawesome/free-solid-svg-icons";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
@@ -12,54 +12,57 @@ import {ProjectList } from './../data/projectList'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Projects(props, ref){
-  const theme = useSelector(state => state.dark);
-  const [selectedCategory, setSelectedCategory] = useState("전체");
-  const [selectSwiper,setSelectSwiper] = useState("박스 보기");
-  const language = useSelector(state => state.language);
 
   const Categories = {
-    "en": ["All", "Team Project", "Personal Project", "Clone Coding"],
-    "kr": ["전체", "팀 프로젝트", "개인 프로젝트", "클론 코딩"]
+    "en": ["All", "Team", "Personal", "Clone"],
+    "kr": ["전체", "팀", "개인", "클론"]
   };
   const SwiperCategory = ["슬라이드 보기" , "박스 보기"]
 
-const Buttons = {
-  "en": [
-    {
-      icon: faShareFromSquare,
-      text: "Go to Site",
-      bgLight: "bg-[#B6E2CB]",
-      bgDark: "dark:bg-[#404343]"
-    },
-    {
-      icon: faGithubAlt,
-      text: "Github",
-      bgLight: "bg-[#B6E2CB]",
-      bgDark: "dark:bg-[#404343]"
-    }
-  ],
-  "kr": [
-    {
-      icon: faShareFromSquare,
-      text: "사이트바로가기",
-      bgLight: "bg-[#B6E2CB]",
-      bgDark: "dark:bg-[#404343]"
-    },
-    {
-      icon: faGithubAlt,
-      text: "Github",
-      bgLight: "bg-[#B6E2CB]",
-      bgDark: "dark:bg-[#404343]"
-    }
-  ]
-};
+  const Buttons = {
+    "en": [
+      {
+        icon: faGithubAlt,
+        text: "Github",
+        bgLight: "bg-[#B6E2CB]",
+        bgDark: "dark:bg-[#404343]"
+      },
+      {
+        icon: faShareFromSquare,
+        text: "Go to Site",
+        bgLight: "bg-[#B6E2CB]",
+        bgDark: "dark:bg-[#404343]"
+      }
+    ],
+    "kr": [
+      {
+        icon: faGithubAlt,
+        text: "Github",
+        bgLight: "bg-[#B6E2CB]",
+        bgDark: "dark:bg-[#404343]"
+      },
+      {
+        icon: faShareFromSquare,
+        text: "사이트바로가기",
+        bgLight: "bg-[#B6E2CB]",
+        bgDark: "dark:bg-[#404343]"
+      }
+    ]
+  };
 
-  const [select, setSelect] = useState('박스 보기');
+  const theme = useSelector(state => state.dark);
+  const language = useSelector(state => state.language); 
+  const [selectSwiper,setSelectSwiper] = useState("박스 보기");
+  const [selectedCategory, setSelectedCategory] = useState(Categories[language][0]);
+
+  useEffect(() => {
+    setSelectedCategory(Categories[language][0]);
+  }, [language]);
 
   return (
     <>
       <div ref={ref} className="w-full pb-20 dark:bg-[#292929] relative">
-        <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
+        <div className="max-w-7xl mx-auto px-[3%] dark:text-[#ebf4f1]">
           <div className="text-xl pb-8">
             <p>&#60;Projects &#47;&#62;</p>
           </div>
@@ -68,19 +71,19 @@ const Buttons = {
                 {
                      Categories[language].map((e,i)=>{
                         return(
-                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer after:absolute after:h-[2px] after:bg-[#C7E8CF] after:bottom-0 after:left-0 after:right-0 dark:after:bg-[#5c5c5c] relative ${selectedCategory === e ? "after:block" : "after:hidden"}`}>
+                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer px-3 sm:px-2 py-1 ${selectedCategory === e ? "bg-[#C7E8CF] text-white" : "border"}`}>
                                 {e}
                             </li>
                         )
                     })
                 }
             </ul>
-            <ul className="flex space-x-2 relative pr-1.5">
+            <ul className="flex space-x-2 relative">
               {
                 SwiperCategory.map((e,i)=>{
                   return(
                     <React.Fragment key={i}>
-                      <li className={`cursor-pointer ${e === select ? 'border-b-2 border-[#C7E8CF] dark:border-[#5c5c5c]' : ''} w-8 h-8 flex justify-center items-center`} onClick={()=>{setSelectSwiper(e);setSelect(e)}}>
+                      <li className={`cursor-pointer ${e === selectSwiper ? 'border-b-2 border-[#C7E8CF] dark:border-[#5c5c5c]' : ''} w-8 h-8 flex justify-center items-center`} onClick={()=>{setSelectSwiper(e);}}>
                         {
                           e === "슬라이드 보기" ?
                           <img className="w-8 h-8" src={theme === 'light' ? './../Images/slideimg_black.png' : './../Images/slideimg.png'} alt="슬라이드 아이콘" />
@@ -97,12 +100,13 @@ const Buttons = {
           {
             selectSwiper === "슬라이드 보기" ?
             <>
+              <div className="swiper-pagination-fractions"></div>
               <Swiper
               spaceBetween={30}
               slidesPerView={1}
               loop={true}
               autoplay={{
-              delay: 8000,
+              delay: 5000,
               disableOnInteraction: false,
               runOnMount: true,
               }}
@@ -124,7 +128,7 @@ const Buttons = {
               }}
               >
                 {
-                  ProjectList.filter(project => selectedCategory === "전체" || project.type === selectedCategory).map((e, i) => {
+                  ProjectList.filter(project => selectedCategory === Categories[language][0] || project.type[language] === selectedCategory).map((e, i) => {
                   return (
                       <SwiperSlide key={i}>
                           <ProjectCard project={e} theme={theme} buttons={Buttons} />
@@ -133,12 +137,12 @@ const Buttons = {
                   })
                 }
               </Swiper>
-              <div className="swiper-pagination-fractions"></div>
+              
             </>
             :
             <div className="flex flex-wrap gap-x-3">
               {
-                ProjectList.filter(project => selectedCategory === "전체" || project.type === selectedCategory).map((e,i)=>{
+                ProjectList.filter(project => selectedCategory === Categories[language][0] || project.type[language] === selectedCategory).map((e,i)=>{
                   return(
                       <div key={i} className="basis-full md:basis-[49%] lg:basis-[32.5%] mb-3 h-auto">
                           <ProjectCard project={e} theme={theme} buttons={Buttons} />

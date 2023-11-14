@@ -3,20 +3,20 @@ import localeData  from './../locales/enkr.json';
 import { useSelector } from "react-redux";
 
 function Skills(props, ref){
+
   const [selectedCategory, setSelectedCategory] = useState("frontend");
+  const language = useSelector(state => state.language);
+  const messages  = localeData[language];
+  const SkillList = messages.skills
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
 
-  const language = useSelector(state => state.language);
-  const messages  = localeData[language];
-  const SkillList = messages.skills
-
   return (
     <>
       <div ref={ref} className="w-full lg:pt-24 md:pt-16 pt-10 lg:pb-28 md:pb-16 pb-10 dark:bg-[#292929]">
-        <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
+        <div className="max-w-7xl mx-auto px-[3%] dark:text-[#ebf4f1]">
           <div className="text-xl">
             <p>&#60;Skills &#47;&#62;</p>
           </div>
@@ -31,7 +31,7 @@ function Skills(props, ref){
                           <div className={`${selectedCategory === e.category
                                 ? "bg-[#C8E9D8] dark:bg-[#5c5c5c]"
                                 : "bg-gray-200 dark:bg-gray-700"
-                            } lg:w-40 lg:h-40 w-32 h-32 rounded-full flex justify-center items-center cursor-pointer`}
+                            } lg:w-40 lg:h-40 md:w-32 md:h-32 w-28 h-28 rounded-full flex justify-center items-center cursor-pointer`}
                             onClick={() => handleCategoryChange(e.category)}>
                             <p className="lg:text-xl md:text-lg text-base font-bold text-center">
                               {e.category}

@@ -24,27 +24,19 @@ function ProjectCard({ project, theme, buttons }) {
             <li>{messages.project3} : {project.contribution}</li>
           </ul>
         </div>
-        <div className="flex space-x-5 p-5">
+        <div className="flex flex-wrap gap-2 p-5">
           {
             buttons[language].map((e, i) => {
               const link = e.text === "사이트바로가기" ? project.web : project.github;
               return (
-                <a
-                  key={i}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-5 py-1 w-auto cursor-pointer ${theme === "dark" ? e.bgDark : e.bgLight} rounded-md`}
-                >
-                  <ul className="flex">
-                    <li>
-                      <FontAwesomeIcon icon={e.icon} className="pr-1" />
-                    </li>
-                    <li>
-                      <p>{e.text}</p>
-                    </li>
-                  </ul>
-                </a>
+                <div key={i} className={`px-5 py-1 w-auto cursor-pointer ${theme === "dark" ? e.bgDark : e.bgLight} rounded-md`}>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    <ul className="flex">
+                      <li><FontAwesomeIcon icon={e.icon} className="pr-1" /></li>
+                      <li><p>{e.text}</p></li>
+                    </ul>
+                  </a>
+                </div>
               );
             })
           }

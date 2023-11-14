@@ -3,8 +3,8 @@ export const ProjectList = [
       img: './../Images/portfolio.svg',
       title: 'Portfolio',
       type: {
-        "en": "Personal Project",
-        "kr": "개인 프로젝트"
+        "en": "Personal",
+        "kr": "개인"
       },
       desc: {
         "en": "This is the first portfolio site of Eunju Lee, a new developer, created to show personal capabilities and experiences.",
@@ -20,8 +20,8 @@ export const ProjectList = [
       img: './../Images/lucky.svg',
       title: 'Lucky',
       type: {
-        "en": "Personal Project",
-        "kr": "개인 프로젝트"
+        "en": "Personal",
+        "kr": "개인"
       },
       desc: {
         "en": "A practical website that enhances luck in daily life and provides basic fortune information using a fortune API.",
@@ -37,8 +37,8 @@ export const ProjectList = [
       img: './../Images/mcdonald_redesign.svg',
       title: 'Mcdonald_Redesign',
       type: {
-        "en": "Personal Project",
-        "kr": "개인 프로젝트"
+        "en": "Personal",
+        "kr": "개인"
       },
       desc: {
         "en": "A project that redesigns and implements the famous McDonald's website responsively.",
@@ -54,8 +54,8 @@ export const ProjectList = [
       img: './../Images/mbtitest.svg',
       title: 'MBTI test',
       type: {
-        "en": "Personal Project",
-        "kr": "개인 프로젝트"
+        "en": "Personal",
+        "kr": "개인"
       },
       desc: {
         "en": "A website with an implemented MBTI test feature that helps users easily understand their personality types.",
@@ -71,8 +71,8 @@ export const ProjectList = [
       img: './../Images/parcel.svg',
       title: 'Parcel',
       type: {
-        "en": "Personal Project",
-        "kr": "개인 프로젝트"
+        "en": "Personal",
+        "kr": "개인"
       },
       desc: {
         "en": "A practical website that allows you to check parcels using the Smart Parcel API.",
@@ -88,8 +88,8 @@ export const ProjectList = [
       img: './../Images/puriproject.svg',
       title: 'Puripuri',
       type: {
-        "en": "Team Project",
-        "kr": "팀 프로젝트"
+        "en": "Team",
+        "kr": "팀"
       },
       desc: {
         "en": "A team project for a site providing abandoned animal information, where I was responsible for the store page.",
@@ -105,8 +105,8 @@ export const ProjectList = [
       img: './../Images/quiz.svg',
       title: 'Quiz',
       type: {
-        "en": "Personal Project",
-        "kr": "개인 프로젝트"
+        "en": "Personal",
+        "kr": "개인"
       },
       desc: {
         "en": "A quiz site that tests basic knowledge of HTML, CSS, and JavaScript.",
@@ -122,8 +122,8 @@ export const ProjectList = [
       img: './../Images/subway.svg',
       title: 'Subway',
       type: {
-        "en": "Clone Coding",
-        "kr": "클론 코딩"
+        "en": "Clone",
+        "kr": "클론"
       },
       desc: {
         "en": "Implemented design elements with CSS and added dynamic features with JavaScript.",
@@ -139,8 +139,8 @@ export const ProjectList = [
       img: './../Images/mcdonald.svg',
       title: 'Mcdonald',
       type: {
-        "en": "Clone Coding",
-        "kr": "클론 코딩"
+        "en": "Clone",
+        "kr": "클론"
       },
       desc: {
         "en": "A project conducted in the initial stage of web development. It increased understanding of the basic principles of web development and website structure.",
