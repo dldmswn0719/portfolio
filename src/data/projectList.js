@@ -7,7 +7,7 @@ export const ProjectList = [
         "kr": "개인"
       },
       desc: {
-        "en": "This is the first portfolio site of Eunju Lee, a new developer, created to show personal capabilities and experiences.",
+        "en": "It is the first portfolio site of a new developer, Eunju Lee, created to show his personal competence and experience.",
         "kr": "개인적인 역량과 경험을 직접 보여주기 위해 제작한 이은주 신입 개발자의 첫 포트폴리오 사이트입니다."
       },
       duration: '2023.10.19 ~ ',
@@ -24,8 +24,8 @@ export const ProjectList = [
         "kr": "개인"
       },
       desc: {
-        "en": "A practical website that enhances luck in daily life and provides basic fortune information using a fortune API.",
-        "kr": "운세 API 를 활용하여 일상에 행운을 더하는, 기본적인 운세 정보를 제공하는 웹사이트입니다."
+        "en": "It is a website that provides basic fortune information using the fortune API.",
+        "kr": "운세 API 를 활용하여 기본적인 운세 정보를 제공하는 웹사이트입니다."
       },
       duration: '2023.11.03 ~ 11.06',
       skills: 'next.js, tailwindcss',
@@ -41,7 +41,7 @@ export const ProjectList = [
         "kr": "개인"
       },
       desc: {
-        "en": "A project that redesigns and implements the famous McDonald's website responsively.",
+        "en": "It is a project that has re-designed and responsive McDonald's website.",
         "kr": "유명한 맥도날드 웹사이트를 새롭게 디자인하고 반응형으로 구현한 프로젝트입니다."
       },
       duration: '2023.11.03 ~ 11.15',
@@ -58,7 +58,7 @@ export const ProjectList = [
         "kr": "개인"
       },
       desc: {
-        "en": "A website with an implemented MBTI test feature that helps users easily understand their personality types.",
+        "en": "It is a website with MBTI test function that helps you easily identify your personality type",
         "kr": "사용자의 성격 유형을 쉽게 파악할 수 있게 도와주는, MBTI 테스트 기능이 구현된 웹사이트입니다."
       },
       duration: '2023.11.01 ~ 11.02',
@@ -75,7 +75,7 @@ export const ProjectList = [
         "kr": "개인"
       },
       desc: {
-        "en": "A practical website that allows you to check parcels using the Smart Parcel API.",
+        "en": "It is a practical website that allows you to look up packages using Smart Delivery API.",
         "kr": "스마트택배API를 활용하여 택배 조회가 가능한 실용적인 웹사이트입니다."
       },
       duration: '2023.10.24 ~ 10.29',
@@ -92,7 +92,7 @@ export const ProjectList = [
         "kr": "팀"
       },
       desc: {
-        "en": "A team project for a site providing abandoned animal information, where I was responsible for the store page.",
+        "en": "This is a team project of a site that provides information on abandoned animals, and I was in charge of the store page.",
         "kr": "유기동물 정보를 제공하는 사이트의 팀 프로젝트로, 스토어 페이지를 담당하였습니다."
       },
       duration: '2023.08.21 ~ 10.09',
@@ -126,7 +126,7 @@ export const ProjectList = [
         "kr": "클론"
       },
       desc: {
-        "en": "Implemented design elements with CSS and added dynamic features with JavaScript.",
+        "en": "We implemented design elements with CSS and added dynamic features with JavaScript.",
         "kr": "CSS로 디자인 요소들을 구현하였고, JavaScript로 동적인 기능들을 추가하였습니다."
       },
       duration: '2023.08.17 ~ 08.31',
@@ -143,8 +143,8 @@ export const ProjectList = [
         "kr": "클론"
       },
       desc: {
-        "en": "A project conducted in the initial stage of web development. It increased understanding of the basic principles of web development and website structure.",
-        "kr": "웹 개발 초기 단계에서 진행된 프로젝트입니다. 웹 개발의 기본적인 원리와 웹사이트 구조에 대한 이해를 높였습니다."
+        "en": "It is a project in the early stages of web development.It was high understanding of the basic principles of web development and website structure.",
+        "kr": "웹 개발 초기에 진행된 프로젝트입니다. 웹 개발의 기본적인 원리와 웹사이트 구조에 대한 이해를 높였습니다."
       },
       duration: '2023.07.25 ~ 08.16',
       skills: 'html,css,javascript',
