@@ -67,8 +67,8 @@ function Projects(props, ref){
 
   return (
     <>
-      <div ref={ref} className="w-full pb-20 px-5 dark:bg-[#292929] relative">
-        <div className="max-w-7xl mx-auto dark:text-[#ebf4f1]">
+      <div ref={ref} className="w-full pb-20 dark:bg-[#292929] relative">
+        <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
           <div className="text-xl pb-8">
             <p>&#60;Projects &#47;&#62;</p>
           </div>
