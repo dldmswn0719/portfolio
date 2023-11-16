@@ -71,7 +71,7 @@ function Projects(props, ref){
                 {
                      Categories[language].map((e,i)=>{
                         return(
-                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer px-3 sm:px-2 py-1 ${selectedCategory === e ? "bg-[#C7E8CF] text-white" : "border"}`}>
+                            <li key={i} onClick={() => setSelectedCategory(e)} className={`cursor-pointer px-3 sm:px-2 py-1 ${selectedCategory === e ? theme === "dark" ? "bg-[#5c5c5c] text-[#ebf4f1]" : "bg-[#C7E8CF] text-white" : "border-[#ebf4f1] border"}`}>
                                 {e}
                             </li>
                         )
