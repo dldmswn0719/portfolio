@@ -59,6 +59,12 @@ function Projects(props, ref){
     setSelectedCategory(Categories[language][0]);
   }, [language]);
 
+  const [swiperAutoplay, setSwiperAutoplay] = useState({
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+  });
+
   return (
     <>
       <div ref={ref} className="w-full pb-20 dark:bg-[#292929] relative">
@@ -105,11 +111,12 @@ function Projects(props, ref){
               spaceBetween={30}
               slidesPerView={1}
               loop={true}
-              autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-              runOnMount: true,
-              }}
+              autoplay={swiperAutoplay}
+              onMouseEnter={() => setSwiperAutoplay(null)}
+              onMouseLeave={() => setSwiperAutoplay({
+                  delay: 5000,
+                  disableOnInteraction: false,
+              })}
               pagination={{
               type: "fraction",
               el: ".swiper-pagination-fractions",

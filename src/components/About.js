@@ -15,7 +15,7 @@ function About(props, ref){
         { icon: faCakeCandles, text: messages.about.birthday },
         { icon: faHouse, text: messages.about.location },
         { icon: faEnvelope, text: messages.about.email },
-        { icon: faGithubAlt, text: messages.about.github },
+        { icon: faGithubAlt, text: messages.about.github , href : "https://github.com/dldmswn0719"},
         { icon : faCarSide , text : messages.about.certificate}
         
     ]
@@ -62,7 +62,19 @@ function About(props, ref){
                                             return(
                                                 <li key={i} className="flex first:pl-0.5">
                                                     <FontAwesomeIcon className={`pt-1 ${i === 3 && 'w-5 h-5'}`} icon={e.icon} />
-                                                    <p className='pl-3'>{e.text}</p>
+                                                    {
+                                                        e.href
+                                                        ?
+                                                        (
+                                                            <a href={e.href} target="_blank" rel="noreferrer" className='pl-3'>
+                                                                {e.text}
+                                                            </a>
+                                                        )
+                                                        :
+                                                        (
+                                                            <p className='pl-3'>{e.text}</p>
+                                                        )
+                                                    }
                                                 </li>
                                             )
                                         })
