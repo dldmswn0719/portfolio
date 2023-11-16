@@ -32,7 +32,7 @@ function Nav({ aboutRef, skillsRef, projectsRef, contactRef }) {
 
     return (
             <>
-                <div className="w-full bg-white px-[3%] sticky top-0 py-4 z-50 dark:bg-[#292929]">
+                <div className="w-full bg-white px-5 sticky top-0 py-4 z-50 dark:bg-[#292929]">
                     <div className="flex items-center justify-between max-w-7xl mx-auto">
                         <img className='w-32 h-9' src={
                             theme === 'light' ? './../Images/logo.png' : './../Images/logo_dark.png'

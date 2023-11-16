@@ -10,7 +10,7 @@ function Contact(props, ref){
     return (
         <>
             <div ref={ref} className="w-full dark:bg-[#292929]">
-                <div className="max-w-7xl mx-auto px-[3%] dark:text-[#ebf4f1]">
+                <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
                     <div className="text-xl lg:pb-20 pb-10">
                         <p>&#60;Contact &#47;&#62;</p>
                     </div>

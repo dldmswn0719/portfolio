@@ -67,8 +67,8 @@ function Projects(props, ref){
 
   return (
     <>
-      <div ref={ref} className="w-full pb-20 dark:bg-[#292929] relative">
-        <div className="max-w-7xl mx-auto px-[3%] dark:text-[#ebf4f1]">
+      <div ref={ref} className="w-full pb-20 px-5 dark:bg-[#292929] relative">
+        <div className="max-w-7xl mx-auto dark:text-[#ebf4f1]">
           <div className="text-xl pb-8">
             <p>&#60;Projects &#47;&#62;</p>
           </div>
@@ -137,21 +137,20 @@ function Projects(props, ref){
                 {
                   ProjectList.filter(project => selectedCategory === Categories[language][0] || project.type[language] === selectedCategory).map((e, i) => {
                   return (
-                      <SwiperSlide key={i}>
+                      <SwiperSlide className="border dark:border-none" key={i}>
                           <ProjectCard project={e} theme={theme} buttons={Buttons} />
                       </SwiperSlide>
                   );
                   })
                 }
               </Swiper>
-              
             </>
             :
             <div className="flex flex-wrap gap-x-3">
               {
                 ProjectList.filter(project => selectedCategory === Categories[language][0] || project.type[language] === selectedCategory).map((e,i)=>{
                   return(
-                      <div key={i} className="basis-full md:basis-[49%] lg:basis-[32.5%] mb-3 h-auto">
+                      <div key={i} className="basis-full md:basis-[49%] lg:basis-[32.5%] mb-3 h-auto border dark:border-none">
                           <ProjectCard project={e} theme={theme} buttons={Buttons} />
                       </div>
                   )

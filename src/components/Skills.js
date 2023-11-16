@@ -16,7 +16,7 @@ function Skills(props, ref){
   return (
     <>
       <div ref={ref} className="w-full lg:pt-24 md:pt-16 pt-10 lg:pb-28 md:pb-16 pb-10 dark:bg-[#292929]">
-        <div className="max-w-7xl mx-auto px-[3%] dark:text-[#ebf4f1]">
+        <div className="max-w-7xl mx-auto px-5 dark:text-[#ebf4f1]">
           <div className="text-xl">
             <p>&#60;Skills &#47;&#62;</p>
           </div>

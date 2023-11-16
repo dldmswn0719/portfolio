@@ -9,7 +9,7 @@ function ProjectCard({ project, theme, buttons }) {
   const messages  = localeData[language]
 
     return (
-      <div className='dark:bg-[#5c5c5c] border dark:border-none bg-white'>
+      <div className='dark:bg-[#5c5c5c] bg-white'>
         <a href={project.web} target="_blank">
           <img className="w-full" src={project.img} alt={project.title} />  
         </a>
