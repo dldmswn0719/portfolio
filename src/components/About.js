@@ -29,7 +29,7 @@ function About(props, ref){
                     <div className="text-xl">
                         <p>&#60;About &#47;&#62;</p>
                     </div>
-                    <div className="h-auto flex overflow-hidden flex-wrap justify-between pt-10">
+                    <div className="h-auto flex flex-wrap justify-between pt-10">
                         <div className="lg:basis-2/5 md:basis-[50%] basis-full">
                             <img className='mx-auto' src={
                                 theme === "light" ? './../Images/about_me.jpg' : './../Images/about_me_dark.jpg'
