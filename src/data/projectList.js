@@ -17,6 +17,23 @@ export const ProjectList = [
       github : "https://github.com/dldmswn0719/portfolio"
     },
     {
+      img: './../Images/board.svg',
+      title: 'Board',
+      type: {
+        "en": "Personal",
+        "kr": "개인"
+      },
+      desc: {
+        "en": "",
+        "kr": "MySQL을 활용하여 만든 게시판입니다. 댓글, 회원가입, 로그인 기능 구현"
+      },
+      duration: '2023.11.06 ~ ',
+      skills: 'next.js, typescript, MySQL, tailwindcss',
+      contribution: '100%',
+      web : "https://mysql-board-ruby.vercel.app/",
+      github : "https://github.com/dldmswn0719/mysql_board"
+    },
+    {
       img: './../Images/lucky.svg',
       title: 'Lucky',
       type: {

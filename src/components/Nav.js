@@ -9,7 +9,7 @@ function Nav({ aboutRef, skillsRef, projectsRef, contactRef }) {
     const theme = useSelector(state => state.dark)
 
     const language = useSelector(state => state.language);
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
     const changeLanguage = (lang) => {
         localStorage.setItem('language', lang);
         dispatch(setLanguage(lang));

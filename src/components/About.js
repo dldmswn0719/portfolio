@@ -65,15 +65,11 @@ function About(props, ref){
                                                     {
                                                         e.href
                                                         ?
-                                                        (
-                                                            <a href={e.href} target="_blank" rel="noreferrer" className='pl-3'>
-                                                                {e.text}
-                                                            </a>
-                                                        )
-                                                        :
-                                                        (
-                                                            <p className='pl-3'>{e.text}</p>
-                                                        )
+                                                        <a href={e.href} target="_blank" rel="noreferrer" className='pl-3'>
+                                                            {e.text}
+                                                        </a>                                                    
+                                                        :                                                        
+                                                        <p className='pl-3'>{e.text}</p>                                                       
                                                     }
                                                 </li>
                                             )
