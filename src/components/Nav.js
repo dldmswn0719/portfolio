@@ -63,7 +63,7 @@ function Nav({ aboutRef, skillsRef, projectsRef, contactRef }) {
                         <div className="block lg:hidden">
                             <div className="flex">
                                 <FontAwesomeIcon onClick={()=>changeLanguage(language === 'kr' ? 'en' : 'kr')} className='cursor-pointer w-[24px] h-[24px] mr-5 mt-[3px] dark:text-[#ebf4f1] text-[#C7E8CF]' icon={faGlobe} />
-                                <div className="transition-all duration-1000 z-[100] cursor-pointer" onClick={() => {toggleHamburger() }}>
+                                <div className="transition-all duration-1000 z-[100] cursor-pointer" onClick={toggleHamburger}>
                                     <FontAwesomeIcon icon={hamburger ? faXmark : faBurger} className={`dark:text-[#ebf4f1] text-[#C7E8CF] ${hamburger ? 'w-8 h-8' : 'w-7 h-7'}`} />
                                 </div>
                             </div>
