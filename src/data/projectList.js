@@ -24,8 +24,8 @@ export const ProjectList = [
         "kr": "개인"
       },
       desc: {
-        "en": "",
-        "kr": "MySQL을 활용하여 만든 게시판입니다. 댓글, 회원가입, 로그인 기능 구현"
+        "en": "This is a bulletin board created using MySQL. Comments, membership registration, and login functions are implemented, and an additional administrator dashboard is also being developed.",
+        "kr": "MySQL을 활용하여 만든 게시판입니다. 댓글, 회원가입, 로그인 기능이 구현되어 있고 또한 관리자 대시보드도 추가로 개발중입니다."
       },
       duration: '2023.11.06 ~ ',
       skills: 'next.js, typescript, MySQL, tailwindcss',
