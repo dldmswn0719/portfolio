@@ -70,3 +70,18 @@ function Skills(props, ref){
 };
 
 export default forwardRef(Skills);
+
+/*
+skill json en                
+{
+  "src": "./../Images/Scss.svg",
+  "alt": "Scss",
+  "txt": "Can write CSS for readability and maintainability. Proficient in using features like variables, mixins, and nesting for efficient styling."
+}, 
+kr
+ {
+    "src":"./../Images/Scss.svg",
+    "alt":"Scss",
+    "txt" : "CSS의 가독성을 높이고, 유지보수에 용이하게 작성할 수 있습니다. 변수, 믹스인, 중첩 등을 적극 활용하여 스타일링을 효율적으로 구성할 수 있습니다."
+  },
+*/ 

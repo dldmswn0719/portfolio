@@ -26,7 +26,7 @@ function Contact(props, ref){
                             <div className="sm:basis-full basis-2/5 sm:pt-5 lg:pl-5">
                                 <p>E-mail : dldmswn071918@gmail.com</p>
                                 <p>kakao</p>
-                                <a href='https://open.kakao.com/o/srWT9eSf'>
+                                <a target='_blank' href='https://open.kakao.com/o/srWT9eSf'>
                                     <img className='w-40 h-40' src="./../Images/qr.png" alt="QR" />
                                 </a>
                             </div>

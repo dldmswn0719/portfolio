@@ -10,7 +10,7 @@
         "about7": "I will continue my path.",
         "hashtags": ["Positive", "Persistent", "Inclusive"],
         "about": {
-            "birthday": "99.07.19",
+            "birthday": "1999.07.19",
             "location": "Daegu Dalseo-gu",
             "email": "dldmswn071918@gmail.com",
             "github": "Github",
@@ -42,11 +42,6 @@
                   "src": "./../Images/Javascript.svg",
                   "alt": "Javascript",
                   "txt": "Familiar with core concepts of JavaScript such as DOM manipulation and event handling. Proficient in ES6+ syntax."
-                },
-                {
-                  "src": "./../Images/Scss.svg",
-                  "alt": "Scss",
-                  "txt": "Can write CSS for readability and maintainability. Proficient in using features like variables, mixins, and nesting for efficient styling."
                 },
                 {
                   "src": "./../Images/Styled-components.svg",
@@ -151,7 +146,7 @@
         "about7" : "로서의 길을 걷겠습니다.",
         "hashtags": ["긍정적인", "근성있는", "포용력있는"],
         "about": {
-            "birthday": "99.07.19",
+            "birthday": "1999.07.19",
             "location": "대구광역시 달서구",
             "email": "dldmswn071918@gmail.com",
             "github": "Github",
@@ -183,12 +178,7 @@
                     "src":"./../Images/Javascript.svg",
                     "alt":"Javascript",
                     "txt" : "javascript의 DOM 조작과 이벤트 처리 등의 핵심 개념에 익숙합니다. ES6이상의 문법을 활용할 수 있습니다."
-                  },
-                  {
-                    "src":"./../Images/Scss.svg",
-                    "alt":"Scss",
-                    "txt" : "CSS의 가독성을 높이고, 유지보수에 용이하게 작성할 수 있습니다. 변수, 믹스인, 중첩 등을 적극 활용하여 스타일링을 효율적으로 구성할 수 있습니다."
-                  },
+                  },                 
                   {
                     "src":"./../Images/Styled-components.svg",
                     "alt":"Styled-components",
