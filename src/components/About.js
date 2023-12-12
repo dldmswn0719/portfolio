@@ -10,17 +10,16 @@ function About(props, ref){
     const language = useSelector(state => state.language);
     const messages  = localeData[language]
     const theme = useSelector(state => state.dark);
+    const HashTags = messages.hashtags;
 
     const AboutList = [
         { icon: faCakeCandles, text: messages.about.birthday },
         { icon: faHouse, text: messages.about.location },
         { icon: faEnvelope, text: messages.about.email },
         { icon: faGithubAlt, text: messages.about.github , href : "https://github.com/dldmswn0719"},
-        { icon : faCarSide , text : messages.about.certificate}
-        
+        { icon : faCarSide , text : messages.about.certificate}        
     ]
 
-    const HashTags = messages.hashtags;
 
     return (
         <>

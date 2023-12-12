@@ -31,10 +31,10 @@ function Inner() {
       dispatch(toggleTheme());
     }
     
-    const currenData = new Date();
-    if(savedTheme && currenData.getHours() >= 17 && darkMode !== 'dark'){
-      dispatch(toggleTheme())
-    }
+    // const currenData = new Date();
+    // if(savedTheme && currenData.getHours() >= 17 && darkMode !== 'dark'){
+    //   dispatch(toggleTheme())
+    // }
     // 저녁6시 이후 자동 다크모드 적용
 
   }, [dispatch]);
